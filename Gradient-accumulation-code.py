@@ -69,7 +69,7 @@ test_size = len(dataset) - train_size
 train_dataset, test_dataset = random_split(dataset, [train_size, test_size])
 
 # Initialize LightningModule with the consistent batch_size and accumulation_steps
-my_model = MyModel(model, train_dataset, test_dataset, batch_size=1, accumulation_steps=10)
+my_model = MyModel(model, train_dataset, test_dataset, batch_size=2, accumulation_steps=10)
 
 # Define a checkpoint callback to save the best model
 checkpoint_dir = './checkpoints/InflunzaA4_25d'
