@@ -41,7 +41,7 @@ class MyModel(LightningModule):
         return DataLoader(self.train_dataset, batch_size=self.hparams.batch_size, shuffle=True, num_workers=8)  # Adjust num_workers as needed
 
     def val_dataloader(self):
-        return DataLoader(self.test_dataset, batch_size=self.hparams.batch_size, num_workers=2)  # Adjust num_workers as needed
+        return DataLoader(self.test_dataset, batch_size=self.hparams.batch_size, num_workers=8)  # Adjust num_workers as needed
 
 # Assuming the model and dataset are already loaded and prepared as per your requirements
 model = GenSLM("genslm_2.5B_patric", model_cache_dir="/scratch/sp96859/GenSLM")
